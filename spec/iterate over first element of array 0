@@ -1,0 +1,44 @@
+iterate over first element of array 0
+iterate over last element of every array except for array 0
+iterate over last array in reverse order except for last element
+iterate over first element of each array in reverse order except for first and last array
+
+var mat = ["abc".split(""), "def".split(""), "ghi".split("")]
+var border = function(mat) {
+  var s = mat.length, right = [], left  = [];
+  var bot = _.rest(mat[s-1].concat().reverse());
+
+  var m = _.flatten(mat)
+    return [
+    mat.slice(0, s-1),
+    mat.filter(function (v, i) { return i % (s + 1) === 0 }),
+    mat.slice(s * s - s, s * s),
+    mat.filter(function (v, i) { return i % (s + 1) === (s - 1) })
+    ]
+
+
+  mat.slice(1).forEach(function (arr) {
+    right.push(_.last(arr))
+    left.unshift(_.first(arr))
+  });
+  return [mat[0], right, bot, left.slice(1)]
+}
+
+var shrinkMat = function(mat) {  
+  return _.map(mat.slice(1,mat.length - 1), function (arr) {
+    return _.reject(arr, function (val, index) {
+       return index === 0 || index === mat.length - 1 
+    });
+  });
+}
+
+var spiral = function (mat) {
+  var results = []
+  while(mat.length > 0) {
+    results.push( border(mat));    
+    mat = shrinkMat(mat)
+  }
+  return _.flatten(results); 
+}
+
+spiral(mat)

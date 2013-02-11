@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /Users/Catalyst/code/nodechat/package.json
+5 verbose read json /Users/Catalyst/code/nodechat/node_modules/connect/package.json
+6 verbose read json /Users/Catalyst/code/nodechat/node_modules/request/package.json
+7 verbose read json /Users/Catalyst/code/nodechat/package.json
+8 verbose cache add [ 'express', null ]
+9 silly cache add name=undefined spec="express" args=["express",null]
+10 verbose parsed url { pathname: 'express', path: 'express', href: 'express' }
+11 silly lockFile f3c62de4-express express
+12 verbose lock express /Users/Catalyst/.npm/f3c62de4-express.lock
+13 silly lockFile f3c62de4-express express
+14 verbose addNamed [ 'express', '' ]
+15 verbose addNamed [ null, '' ]
+16 silly lockFile 64a534c1-express express@
+17 verbose lock express@ /Users/Catalyst/.npm/64a534c1-express.lock
+18 silly lockFile 64a534c1-express express@
+19 error Error: EACCES, open '/Users/Catalyst/.npm/64a534c1-express.lock'
+19 error  { [Error: EACCES, open '/Users/Catalyst/.npm/64a534c1-express.lock']
+19 error   errno: 3,
+19 error   code: 'EACCES',
+19 error   path: '/Users/Catalyst/.npm/64a534c1-express.lock' }
+20 error Please try running this command again as root/Administrator.
+21 error System Darwin 12.1.1
+22 error command "node" "/usr/local/bin/npm" "install" "express"
+23 error cwd /Users/Catalyst/code/nodechat
+24 error node -v v0.8.14
+25 error npm -v 1.1.65
+26 error path /Users/Catalyst/.npm/64a534c1-express.lock
+27 error code EACCES
+28 error errno 3
+29 error stack Error: EACCES, open '/Users/Catalyst/.npm/64a534c1-express.lock'
+30 verbose exit [ 3, true ]
